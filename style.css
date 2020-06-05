@@ -145,6 +145,10 @@ body {
   height: 45px;
 }
 
-[property="social_link"][mv-mode="edit"] {
+[property="social_link-linkedin"][mv-mode="edit"],
+[property="social_link-facebook"][mv-mode="edit"],
+[property="social_link-twitter"][mv-mode="edit"],
+[property="social_link-instagram"][mv-mode="edit"],
+[property="social_link-youtube"][mv-mode="edit"] {
   padding-bottom: 10rem;
 }
