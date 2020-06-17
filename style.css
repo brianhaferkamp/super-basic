@@ -152,6 +152,14 @@ body {
   margin: 1rem 0;
 }
 
+.profile-social-instructions {
+  background: #eee;
+  padding: 0.5rem 1rem;
+  margin: 0 0 1.5rem;
+  display: none;
+  text-align: center;
+}
+
 .social-menu {
   -webkit-box-pack: center;
           justify-content: center;
@@ -182,5 +190,9 @@ body {
   display: none;
 }
 [mv-progress] .placeholder-image {
+  display: block;
+}
+
+[mv-mode="edit"] .profile-social-instructions {
   display: block;
 }
