@@ -73,11 +73,6 @@ body {
   font-size: 2.5rem;
   line-height: 1;
 }
-@media (min-width: 600px) {
-  .profile-name {
-    font-size: 2.5rem;
-  }
-}
 @media (min-width: 800px) {
   .profile-name {
     font-size: 3.5rem;
@@ -86,7 +81,7 @@ body {
 
 .profile-title {
   margin: 0 0 2rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 400;
 }
 @media (min-width: 600px) {
@@ -114,6 +109,14 @@ body {
   .profile-text p {
     font-size: 1.5rem;
   }
+}
+.profile-text a {
+  color: #333;
+  -webkit-transition: opacity 200ms ease;
+  transition: opacity 200ms ease;
+}
+.profile-text a:hover {
+  opacity: 0.7;
 }
 .profile-text h1 {
   font-size: 3rem;
@@ -146,7 +149,7 @@ body {
 }
 
 .profile-social-headline {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 400;
   text-align: center;
   margin: 1rem 0;
