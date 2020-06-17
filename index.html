@@ -5,8 +5,6 @@
   <title>CodePen - Template Site / Super Basic</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- Load Mavo.io -->
-<script src="https://get.mavo.io/stable/mavo.es5.min.js"></script>
 <link rel="stylesheet" href="https://get.mavo.io/stable/mavo.min.css">
 
 <!-- Load Google Fonts -->
@@ -18,10 +16,12 @@
 <!-- partial:index.partial.html -->
 <div class="app" mv-app="persoanlsite" mv-storage="local" mv-plugins="tinymce" mv-bar="no-login">     
   <header class="profile-header">
-    <div class="profile-image"><img src="https://source.unsplash.com/mEZ3PoFGs_k/600x600" property="profile_image" alt="Profile photo of [profile_name], [profile_title]" title="[profile_name], [profile_title]"/></div>
+    <div class="profile-image"><img class="placeholder-image" src="https://assets.codepen.io/495197/image-placeholderpng" property="profile_image" alt="Profile photo of [profile_name], [profile_title]" title="[profile_name], [profile_title]"/>
+      <!--img.placeholder-image(src="https://assets.codepen.io/495197/image-placeholderpng")-->
+    </div>
     <div class="profile-header-text">
-      <h1 class="profile-name" property="profile_name">Rachel Smith</h1>
-      <h2 class="profile-title" property="profile_title">Engineer / Entrepreneur</h2>
+      <h1 class="profile-name" property="profile_name" mv-default="Profile Name"></h1>
+      <h2 class="profile-title" property="profile_title" mv-default="Profile Title"></h2>
     </div>
   </header>
   <article class="profile-text tinymce" property="profile_text">
@@ -33,16 +33,13 @@
       <h3 class="profile-social-headline" property="profile_social_headline">Connect</h3>
     </header>
     <ul class="horz-menu social-menu">
-      <li class="social-menu-item" property="social_item" mv-multiple="mv-multiple"><a href="#" property="social_link-linkedin" target="_blank"><img src="icons/linkedin-filled.png" property="social_icon"/></a></li>
-      <li class="social-menu-item" property="social_item" mv-multiple="mv-multiple"><a href="#" property="social_link-facebook" target="_blank"><img src="icons/facebook-filled.png" property="social_icon"/></a></li>
-      <li class="social-menu-item" property="social_item" mv-multiple="mv-multiple"><a href="#" property="social_link-twitter" target="_blank"><img src="icons/twitter-filled.png" property="social_icon"/></a></li>
-      <li class="social-menu-item" property="social_item" mv-multiple="mv-multiple"><a href="#" property="social_link-instagram" target="_blank"><img src="icons/instagram-filled.png" property="social_icon"/></a></li>
-      <li class="social-menu-item" property="social_item" mv-multiple="mv-multiple"><a href="#" property="social_link-youtube" target="_blank"><img src="icons/youtube-filled.png" property="social_icon"/>
-          <!--i.zmdi.zmdi-facebook-box(property="social_icon")--></a></li>
+      <li class="social-menu-item" property="social_item" mv-multiple="mv-multiple">
+        <meta property="icon_url" content="[if(contains(social_link, 'twitter'), 'https://brianhaferkamp.github.io/super-basic/icons/twitter-filled.png', if(contains(social_link, 'facebook'), 'https://brianhaferkamp.github.io/super-basic/icons/facebook-filled.png', if(contains(social_link, 'linkedin'), 'https://brianhaferkamp.github.io/super-basic/icons/linkedin-filled.png', if(contains(social_link, 'pinterest'), 'https://brianhaferkamp.github.io/super-basic/icons/pinterest-filled.png', if(contains(social_link, 'behance'), 'https://brianhaferkamp.github.io/super-basic/icons/behance-filled.png', if(contains(social_link, 'github'), 'https://brianhaferkamp.github.io/super-basic/icons/github-filled.png', if(contains(social_link, 'instagram'), 'https://brianhaferkamp.github.io/super-basic/icons/instagram-filled.png', if(contains(social_link, 'patreon'), 'https://brianhaferkamp.github.io/super-basic/icons/patreon-filled.png', if(contains(social_link, 'vk'), 'https://brianhaferkamp.github.io/super-basic/icons/vk-filled.png', if(contains(social_link, 'youtube'), 'https://brianhaferkamp.github.io/super-basic/icons/youtube-filled.png', if(contains(social_link, 'wordpress'), 'https://brianhaferkamp.github.io/super-basic/icons/wordpress-filled.png', 'https://assets.codepen.io/495197/icon-default.svg')))))))))))]"/><a href="#" property="social_link" target="_blank"><img src="[icon_url]"/></a>
+      </li>
     </ul>
   </footer>
 </div>
 <!-- partial -->
-  
+  <script src='https://get.mavo.io/stable/mavo.es5.min.js'></script>
 </body>
 </html>

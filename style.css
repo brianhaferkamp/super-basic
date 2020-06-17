@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "blokk";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/5028/BLOKKNeue-Regular.woff");
+}
 body {
   background-color: #f9f9f9;
   font-family: "Karla", sans-serif;
@@ -111,6 +115,31 @@ body {
     font-size: 1.5rem;
   }
 }
+.profile-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0 0 0;
+}
+.profile-text h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 0;
+}
+.profile-text h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 0;
+}
+.profile-text h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 0;
+}
+.profile-text h5 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 0;
+}
 
 .profile-social {
   margin-top: 2rem;
@@ -145,10 +174,13 @@ body {
   height: 45px;
 }
 
-[property="social_link-linkedin"][mv-mode="edit"],
-[property="social_link-facebook"][mv-mode="edit"],
-[property="social_link-twitter"][mv-mode="edit"],
-[property="social_link-instagram"][mv-mode="edit"],
-[property="social_link-youtube"][mv-mode="edit"] {
-  padding-bottom: 10rem;
+[mv-progress] {
+  font-family: blokk, sans-serif;
+  opacity: 0.1;
+}
+[mv-progress] .regular-image {
+  display: none;
+}
+[mv-progress] .placeholder-image {
+  display: block;
 }
